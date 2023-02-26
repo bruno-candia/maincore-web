@@ -1,5 +1,5 @@
-import { Title } from '@/styles/global.css'
 import Head from 'next/head'
+import { Header } from '@/components'
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Title> NextJS Blog with Butter CMS</Title>
+      <Header/>
     </>
   )
 }
