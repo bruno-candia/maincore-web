@@ -1,7 +1,11 @@
-import Head from 'next/head'
-import { Header } from '@/components'
+import Head from "next/head";
+import { useTranslation } from "@/hooks/useTranslation";
+
+import { Header, AccordionHeader } from "@/components";
 
 export default function Home() {
+  const { textTranslated, setLanguage, language } = useTranslation();
+
   return (
     <>
       <Head>
@@ -10,7 +14,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
+      <Header
+        textTranslated={textTranslated}
+        setLanguage={setLanguage}
+        language={language}
+      />
+      <AccordionHeader textTranslated={textTranslated} />
+      <main>
+        <section>
+          <h1>teste</h1>
+        </section>
+      </main>
     </>
-  )
+  );
 }
