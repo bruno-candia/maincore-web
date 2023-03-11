@@ -8,16 +8,16 @@ interface Translations {
 }
 
 export function useTranslation() {
-  const [language, setLanguage] = useState("pt-BR");
+  const [language, setLanguage] = useState<string>("pt-BR");
   const translate: Translations = translations;
 
   useEffect(() => {
     const navigatorLanguage = window.navigator.language;
-    setLanguage(navigatorLanguage)
-  }, [])
+    setLanguage(navigatorLanguage);
+  }, []);
 
   const textTranslated = (key: string) => {
-    return translate[language][key];
+    return translate[language]?.[key] || key;
   };
 
   return { textTranslated, setLanguage, language };

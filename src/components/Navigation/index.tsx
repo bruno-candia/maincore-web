@@ -1,12 +1,9 @@
+import { TranslateProps } from "@/@types";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { CaretDown } from "phosphor-react";
 import { Navbar } from "./styles";
 
-interface NavigationProps {
-  textTranslated: (key: string) => string;
-}
-
-export function Navigation({ textTranslated }: NavigationProps) {
+export function Navigation({ textTranslated }: TranslateProps) {
   return (
     <Navbar>
       <NavigationMenu.Root className="NavigationMenuRoot">
@@ -21,7 +18,7 @@ export function Navigation({ textTranslated }: NavigationProps) {
               className="NavigationMenuTrigger"
               style={{ cursor: "pointer" }}
             >
-              {textTranslated("product")}
+              {textTranslated?.("product")}
               <CaretDown size={16} aria-hidden />
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className="NavigationMenuContent">
@@ -31,7 +28,7 @@ export function Navigation({ textTranslated }: NavigationProps) {
                     <a className={`ListItemLink`} href="/vega">
                       <div className="ListItemHeading">Maincore Vega</div>
                       <p className="ListItemText">
-                        {textTranslated("vega-description")}
+                        {textTranslated?.("vega-description")}
                       </p>
                     </a>
                   </NavigationMenu.Link>
@@ -41,7 +38,7 @@ export function Navigation({ textTranslated }: NavigationProps) {
                     <a className={`ListItemLink`} href="/sirius">
                       <div className="ListItemHeading">Maincore Sirius</div>
                       <p className="ListItemText">
-                        {textTranslated("sirius-description")}
+                        {textTranslated?.("sirius-description")}
                       </p>
                     </a>
                   </NavigationMenu.Link>
@@ -55,7 +52,7 @@ export function Navigation({ textTranslated }: NavigationProps) {
               className="NavigationMenuLink"
               href="/resources"
             >
-              {textTranslated("resources")}
+              {textTranslated?.("resources")}
             </NavigationMenu.Link>
           </NavigationMenu.Item>
 
