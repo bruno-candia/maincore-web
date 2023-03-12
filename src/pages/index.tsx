@@ -1,7 +1,11 @@
-import { Title } from '@/styles/global.css'
-import Head from 'next/head'
+import Head from "next/head";
+import { useTranslation } from "@/hooks/useTranslation";
+
+import { Header, AccordionHeader } from "@/components";
 
 export default function Home() {
+  const { textTranslated, setLanguage, language } = useTranslation();
+
   return (
     <>
       <Head>
@@ -10,7 +14,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Title> NextJS Blog with Butter CMS</Title>
+      <Header
+        textTranslated={textTranslated}
+        setLanguage={setLanguage}
+        language={language}
+      />
+      <AccordionHeader textTranslated={textTranslated} />
+      <main>
+        <section>
+          <h1>teste</h1>
+        </section>
+      </main>
     </>
-  )
+  );
 }

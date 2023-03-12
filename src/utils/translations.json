@@ -1,0 +1,16 @@
+{
+  "pt-BR": {
+      "product": "Produto",
+      "resources": "Recursos",
+      "soon": "Em breve",
+      "vega-description": "Ultrapasse seus limites com nossa flexibilidade de customização.",
+      "sirius-description": "Hardware e sistemas operacionais avançados para se destacar no mercado."
+  },
+  "en-US": {
+      "product": "Product",
+      "resources": "Resources",
+      "soon": "Soon",
+      "vega-description": "Push your limits with our customization flexibility.",
+      "sirius-description": "Advanced hardware and operating systems to stand out in the market."
+  }
+}
