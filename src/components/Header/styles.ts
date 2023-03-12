@@ -14,7 +14,6 @@ export const Wrapper = styled.div`
   z-index: 1;
 `;
 
-
 export const Container = styled.div`
   max-width: ${size.desktop};
   padding: ${spacing.md};
@@ -65,7 +64,7 @@ export const Button = styled.button<ButtonProps>`
   background: transparent;
   border: none;
   font-size: ${typography.small};
-  color: ${colors.primaryText};
+  color: ${colors.black100};
   font-style: normal;
   letter-spacing: 0.04em;
   line-height: ${spacing.sm};

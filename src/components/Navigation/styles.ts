@@ -1,4 +1,4 @@
-import { spacing, typography, colors } from "@/styles/global.css";
+import { spacing, typography, colors, size } from "@/styles/global.css";
 import styled from "styled-components";
 
 export const Navbar = styled.nav`
@@ -31,7 +31,7 @@ export const Navbar = styled.nav`
     outline: none;
     user-select: none;
     font-size: ${typography.p};
-    color: ${colors.primaryText};
+    color: ${colors.black100};
     font-style: normal;
     letter-spacing: 0.02em;
     line-height: ${spacing.md};
@@ -157,11 +157,11 @@ export const Navbar = styled.nav`
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 5px;
-    color: ${colors.secondary};
+    color: ${colors.tertiary800};
   }
 
   .ListItemText {
-    color: ${colors.secondaryText};
+    color: ${colors.gray200};
     line-height: 1.4;
     font-weight: initial;
   }
@@ -178,7 +178,7 @@ export const Navbar = styled.nav`
 
   .CaretDown {
     position: relative;
-    color: ${colors.secondary};
+    color: ${colors.tertiary800};
     top: 1px;
     transition: transform 250ms ease;
   }
@@ -278,5 +278,9 @@ export const Navbar = styled.nav`
     to {
       opacity: 0;
     }
+  }
+
+  @media (max-width: ${size.tablet}) {
+    display: none;
   }
 `;
