@@ -31,22 +31,23 @@ export const colors = {
   tertiary200: "rgba(178, 197, 255, 1)",
   tertiary100: " rgba(208, 219, 255, 1)",
   tertiary50: "rgba(238, 242, 255, 1)",
-  white100: "rgba(255,255,255,1)",
-  white75: "rgba(255,255,255,0.75)",
-  white65: "rgba(255,255,255,0.65)",
-  white50: "rgba(255,255,255,0.5)",
-  white40: "rgba(255,255,255,0.4)",
-  white30: "rgba(255,255,255,0.3)",
-  white20: "rgba(255,255,255,0.2)",
-  white10: "rgba(255,255,255,0.1)",
-  black100: "rgba(0,0,0,1)",
-  black75: "rgba(0,0,0,0.75)",
-  black65: "rgba(0,0,0,0.65)",
-  black50: "rgba(0,0,0,0.5)",
-  black40: "rgba(0,0,0,0.4)",
-  black30: "rgba(0,0,0,0.3)",
-  black20: "rgba(0,0,0,0.2)",
-  black10: "rgba(0,0,0,0.1)",
+  white: "#fff",
+  white100: "rgba(242,242,242,1)",
+  white75: "rgba(242,242,242,0.75)",
+  white65: "rgba(242,242,242,0.65)",
+  white50: "rgba(242,242,242,0.5)",
+  white40: "rgba(242,242,242,0.4)",
+  white30: "rgba(242,242,242,0.3)",
+  white20: "rgba(242,242,242,0.2)",
+  white10: "rgba(242,242,242,0.1)",
+  black100: "rgba(10,13,12,1)",
+  black75: "rgba(10,13,12,0.75)",
+  black65: "rgba(10,13,12,0.65)",
+  black50: "rgba(10,13,12,0.5)",
+  black40: "rgba(10,13,12,0.4)",
+  black30: "rgba(10,13,12,0.3)",
+  black20: "rgba(10,13,12,0.2)",
+  black10: "rgba(10,13,12,0.1)",
   gray900: "rgba(18, 24, 41, 1)",
   gray800: "rgba(32, 40, 62, 1)",
   gray700: "rgba(50, 59, 84, 1)",
@@ -57,8 +58,7 @@ export const colors = {
   gray200: "rgba(168, 174, 191, 1)",
   gray100: "rgba(195, 200, 212, 1)",
   gray50: "rgba(229, 235, 249, 1)",
-  logoGradient:
-    "linear-gradient(90deg, rgba(133, 215, 224, 1) 0%, rgba(23, 42, 79, 1) 100%)",
+  logoGradient: "35.75deg, #85D7E0 14.63%, #172A4F 75.07%",
 };
 
 export const size = {
@@ -70,11 +70,11 @@ export const size = {
 
 export const typography = {
   fontFamily: "Montserrat, sans-serif",
-  h1: "36px",
-  h2: "28px",
-  h3: "24px",
-  h4: "20px",
-  p: "16px",
+  h1: "32px",
+  h2: "24px",
+  h3: "20px",
+  h4: "16px",
+  p: "14px",
   small: "12px",
 };
 
@@ -103,6 +103,31 @@ export default createGlobalStyle`
   html,
   body {
     max-width: 100vw;
+  
+  }
+
+  body{
+    overflow-x: hidden;
+    /* width */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: ${colors.white100};
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: ${colors.secondary800};
+      border-radius: ${spacing.xsm};
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   }
 
 `;
@@ -123,12 +148,16 @@ export const TextLink = styled.a`
 
 export const Title = styled.h1`
   font-size: ${typography.h1};
-  color: ${colors.primary700};
+  font-family: ${typography.fontFamily};
+  font-weight: 500;
+  color: ${colors.black100};
 `;
 
 export const Subtitle = styled.h2`
-  font-size: ${typography.h2};
-  color: ${colors.tertiary800};
+  font-size: ${typography.h4};
+  font-family: ${typography.fontFamily};
+  font-weight: 400;
+  color: ${colors.gray600};
 `;
 
 export const Text = styled.p`

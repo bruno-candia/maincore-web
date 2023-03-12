@@ -1,7 +1,21 @@
 import Head from "next/head";
 import { useTranslation } from "@/hooks/useTranslation";
+import boardImage from "../../public/images/board.png";
 
-import { Header, AccordionHeader } from "@/components";
+import { Header, AccordionHeader, InputFiel } from "@/components";
+import {
+  ButtonHome,
+  FormContainer,
+  HeroContainer,
+  HeroImage,
+  HeroWhiteSpace,
+  ImageWrapper,
+  InputButton,
+  Wrapper,
+} from "./styles/home.styles";
+import { CaretDown } from "phosphor-react";
+import Image from "next/image";
+import { colors, Subtitle, Title } from "@/styles/global.css";
 
 export default function Home() {
   const { textTranslated, setLanguage, language } = useTranslation();
@@ -20,11 +34,51 @@ export default function Home() {
         language={language}
       />
       <AccordionHeader textTranslated={textTranslated} />
-      <main>
-        <section>
-          <h1>teste</h1>
-        </section>
-      </main>
+      <Wrapper>
+        <HeroContainer>
+          <HeroWhiteSpace>
+            <Title>
+              Escolha o hardware ideal para atender às necessidades do seu
+              produto
+            </Title>
+            <Subtitle>
+              Plataformas customizáveis de hardware e sistema operacional.
+              Oferecemos agilidade e qualidade para seus produtos.
+            </Subtitle>
+            <FormContainer>
+              <form action="">
+                <InputFiel
+                  type="email"
+                  name="email"
+                  placeholder="Seu e-mail"
+                  paddingRight={120}
+                />
+                <InputButton type="submit">Enviar</InputButton>
+              </form>
+              <a>
+                <small>Quer nos conhecer melhor? Estamos à disposição!</small>
+              </a>
+            </FormContainer>
+            <ButtonHome>
+              <span>Tem dúvida? Mande-nos uma mensagem</span>
+              <CaretDown size={14} weight="bold" aria-hidden />
+            </ButtonHome>
+          </HeroWhiteSpace>
+          <HeroImage>
+            <ImageWrapper>
+              <div className="image-container">
+                <Image
+                  src={boardImage}
+                  alt={"Maincore Logo"}
+                  className="logo"
+                  priority
+                  fill
+                />
+              </div>
+            </ImageWrapper>
+          </HeroImage>
+        </HeroContainer>
+      </Wrapper>
     </>
   );
 }

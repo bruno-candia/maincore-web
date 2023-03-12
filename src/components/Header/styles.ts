@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   max-width: ${size.desktop};
   padding: ${spacing.md};
+  background-color: ${colors.white};
   display: flex;
   justify-content: space-between;
   align-items: center;
