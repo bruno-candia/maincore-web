@@ -151,6 +151,10 @@ export const Title = styled.h1`
   font-family: ${typography.fontFamily};
   font-weight: 500;
   color: ${colors.black100};
+
+  @media (max-width: ${size.laptop}) {
+    font-size: ${typography.h2};
+  }
 `;
 
 export const Subtitle = styled.h2`
@@ -158,6 +162,10 @@ export const Subtitle = styled.h2`
   font-family: ${typography.fontFamily};
   font-weight: 400;
   color: ${colors.gray600};
+
+  @media (max-width: ${size.laptop}) {
+    font-size: ${typography.p};
+  }
 `;
 
 export const Text = styled.p`

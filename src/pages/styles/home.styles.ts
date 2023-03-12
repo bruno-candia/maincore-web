@@ -21,6 +21,28 @@ export const HeroContainer = styled.section`
   grid-template-areas: "a a b b b b";
   width: 100%;
   max-width: 1140px;
+  @media (max-width: ${size.laptop}) {
+    max-width: 800px;
+    padding: calc(2 * ${spacing.md}) ${spacing.md};
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr 1fr;
+    grid-template-areas:
+      "b b b"
+      "a a a";
+  }
+
+  @media (max-width: ${size.tablet}) {
+    padding: calc(${spacing.md}) ${spacing.md};
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr 1fr;
+    grid-template-areas:
+      "b b b"
+      "a a a";
+  }
+
+  @media (max-width: ${size.mobile}) {
+    grid-auto-rows: 0.8fr 1fr;
+  }
 `;
 
 export const HeroWhiteSpace = styled.div`
@@ -29,6 +51,13 @@ export const HeroWhiteSpace = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
+  @media (max-width: ${size.laptop}) {
+    max-width: 600px;
+    align-items: center;
+    margin: 48px auto 0;
+    justify-content: center;
+    text-align: center;
+  }
 `;
 
 export const InputButton = styled.button`
@@ -60,6 +89,10 @@ export const FormContainer = styled.div`
     cursor: pointer;
     small {
       color: ${colors.tertiary800};
+
+      @media (max-width: ${size.laptop}) {
+        font-size: ${typography.small};
+      }
     }
   }
 `;
@@ -88,6 +121,9 @@ export const HeroImage = styled.div`
   grid-area: b;
   width: 60%;
   justify-self: flex-end;
+  @media (max-width: ${size.laptop}) {
+    justify-self: center;
+  }
   position: relative;
 `;
 
@@ -124,7 +160,18 @@ export const ImageWrapper = styled.div`
     width: 70% !important;
     max-width: 400px;
     position: relative !important;
-
     height: unset !important;
+
+    @media (max-width: ${size.laptop}) {
+      width: 60% !important;
+    }
+
+    @media (max-width: ${size.tablet}) {
+      width: 60% !important;
+    }
+
+    @media (max-width: ${size.mobile}) {
+      width: 55% !important;
+    }
   }
 `;
