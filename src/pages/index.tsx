@@ -32,6 +32,12 @@ import {
   NewProductCard,
   ProductCard,
   ProductWrapper,
+  ContactContainer,
+  ContactFormContainer,
+  ContactFormTile,
+  ContactTextArea,
+  CheckboxContainer,
+  ContactButtonForm,
 } from "./styles/home.styles";
 import {
   CaretDown,
@@ -48,6 +54,7 @@ import {
   Subtitle,
   Title,
 } from "@/styles/global.css";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   const { textTranslated, setLanguage, language } = useTranslation();
@@ -111,10 +118,10 @@ export default function Home() {
           </HeroImage>
         </HeroContainer>
         <Section style={{ backgroundColor: `${colors.white100}` }}>
-          <SectionTitle>Lorem ipsum dolor sit amet consectetur</SectionTitle>
+          <SectionTitle>Nossos Clientes</SectionTitle>
           <BodyText>
-            Quam libero nulla sed malesuada viverra. Ut venenatis pellentesque
-            arcu lacus proin luctus. Id vehicula
+            Junte-se as empresas que confiam na Maincore para suas necessidades
+            de engenharia.
           </BodyText>
           <ClientsImage>
             <Image
@@ -282,6 +289,55 @@ export default function Home() {
             </ProductContainer>
           </ProductWrapper>
         </Section>
+        <Section style={{ backgroundColor: `${colors.white100}` }} id="message">
+          <ContactContainer>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                flexDirection: "column",
+                textAlign: "start",
+                gap: "16px",
+                width: "400px",
+              }}
+            >
+              <div>
+                <SectionTitle>Precisa inovar?</SectionTitle>
+                <SectionTitle>Nós te ajudamos!</SectionTitle>
+              </div>
+
+              <BodyText>
+                Preencha o formulário e entraremos em contato em até 24 horas.
+                Para atendimento imediato, entre em contato conosco.
+              </BodyText>
+            </div>
+            <ContactFormContainer id="contactForm">
+              <ContactFormTile>Fale Conosco</ContactFormTile>
+              <InputFiel
+                type="email"
+                name="email"
+                placeholder="E-mail*"
+                paddingRight={120}
+              />
+              <InputFiel
+                type="phone"
+                name="phone"
+                placeholder="Telefone (Opcional)"
+                paddingRight={120}
+              />
+              <ContactTextArea form="contactForm" placeholder="Mensagem*" />
+              <CheckboxContainer>
+                <input type="checkbox" name="terms" />
+                <small>
+                  Aceito compartilhar minhas informações com a Maincore, eu
+                  estou ciente da Política de Privacidade
+                </small>
+              </CheckboxContainer>
+              <ContactButtonForm>Enviar Contato</ContactButtonForm>
+            </ContactFormContainer>
+          </ContactContainer>
+        </Section>
+        <Footer />
       </Wrapper>
     </>
   );
