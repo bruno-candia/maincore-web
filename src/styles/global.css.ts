@@ -157,6 +157,17 @@ export const Title = styled.h1`
   }
 `;
 
+export const SectionTitle = styled.h2`
+  font-size: ${typography.h2};
+  font-family: ${typography.fontFamily};
+  font-weight: 500;
+  color: ${colors.black100};
+
+  @media (max-width: ${size.laptop}) {
+    font-size: ${typography.h3};
+  }
+`;
+
 export const Subtitle = styled.h2`
   font-size: ${typography.h4};
   font-family: ${typography.fontFamily};
@@ -168,9 +179,10 @@ export const Subtitle = styled.h2`
   }
 `;
 
-export const Text = styled.p`
+export const BodyText = styled.p`
   font-size: ${typography.p};
-  color: ${colors.black100};
+  font-family: ${typography.fontFamily};
+  color: ${colors.gray600};
 `;
 
 export const Button = styled.button`

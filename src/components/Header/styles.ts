@@ -12,12 +12,12 @@ export const Wrapper = styled.div`
   position: fixed;
   box-shadow: ${shadow.small};
   z-index: 1;
+  background-color: ${colors.white};
 `;
 
 export const Container = styled.div`
   max-width: ${size.desktop};
   padding: ${spacing.md};
-  background-color: ${colors.white};
   display: flex;
   justify-content: space-between;
   align-items: center;
