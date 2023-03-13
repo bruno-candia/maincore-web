@@ -385,6 +385,7 @@ export const ProductCard = styled.div`
   font-weight: 500;
   color: ${colors.secondary500};
 `;
+
 export const NewProductCard = styled.div`
   width: 100%;
   border-radius: ${spacing.xsm};
@@ -396,4 +397,77 @@ export const NewProductCard = styled.div`
   font-size: ${typography.p};
   font-weight: 600;
   color: ${colors.primary700};
+`;
+export const ContactContainer = styled.div`
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  justify-items: flex-start;
+  width: 1100px;
+  height: 100%;
+  gap: 96px;
+`;
+export const ContactFormContainer = styled.form`
+  padding: 32px;
+  background-color: ${colors.tertiary800};
+  border-radius: ${spacing.xsm};
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  align-items: flex-start;
+`;
+
+export const ContactFormTile = styled.h3`
+  margin-bottom: 16px;
+  color: ${colors.white100};
+  font-size: 24px;
+  font-weight: 600;
+`;
+
+export const ContactTextArea = styled.textarea`
+  padding: 20px 24px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: ${colors.white100};
+  resize: none;
+  color: ${colors.black100};
+  border: 1px solid ${colors.tertiary800};
+
+  &:focus {
+    outline: none !important;
+    border: 1px solid ${colors.tertiary500};
+  }
+`;
+
+export const CheckboxContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: start;
+  gap: 16px;
+
+  input {
+    height: 25px;
+    width: 25px;
+  }
+
+  small {
+    color: ${colors.gray100};
+  }
+`;
+
+export const ContactButtonForm = styled.button`
+  padding: 16px 30px;
+  color: ${colors.tertiary800};
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: ${spacing.xsm};
+  border: none;
+  box-shadow: none;
+  background-color: ${colors.white};
+  cursor: pointer;
+  &:hover {
+    filter: brightness(95%);
+  }
 `;
