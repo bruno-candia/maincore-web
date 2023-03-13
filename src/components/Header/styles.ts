@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
   position: fixed;
   box-shadow: ${shadow.small};
   z-index: 1;
+  background-color: ${colors.white};
 `;
 
 export const Container = styled.div`

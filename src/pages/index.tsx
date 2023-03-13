@@ -1,7 +1,53 @@
 import Head from "next/head";
 import { useTranslation } from "@/hooks/useTranslation";
+import boardImage from "../../public/images/board.png";
+import cienaLogo from "../../public/images/ciena-logo.png";
+import inatelLogo from "../../public/images/inatel-logo.png";
+import learningVillageLogo from "../../public/images/learning-village-logo.png";
+import unicampLogo from "../../public/images/unicamp-logo.png";
+import accentureLogo from "../../public/images/accenture-logo.png";
+import boardBackground from "../../public/images/board-bg.png";
 
-import { Header, AccordionHeader } from "@/components";
+import { Header, AccordionHeader, InputFiel } from "@/components";
+import {
+  ButtonHome,
+  FormContainer,
+  HeroContainer,
+  HeroImage,
+  HeroWhiteSpace,
+  ImageWrapper,
+  InputButton,
+  ClientsImage,
+  Wrapper,
+  CardContainer,
+  CardIcon,
+  CardText,
+  Section,
+  CardWrapper,
+  ProductContainer,
+  ProductDescription,
+  ProductTitle,
+  ProductImage,
+  ProductButton,
+  NewProductCard,
+  ProductCard,
+  ProductWrapper,
+} from "./styles/home.styles";
+import {
+  CaretDown,
+  Chats,
+  Cursor,
+  RocketLaunch,
+  Signpost,
+} from "phosphor-react";
+import Image from "next/image";
+import {
+  BodyText,
+  colors,
+  SectionTitle,
+  Subtitle,
+  Title,
+} from "@/styles/global.css";
 
 export default function Home() {
   const { textTranslated, setLanguage, language } = useTranslation();
@@ -20,11 +66,223 @@ export default function Home() {
         language={language}
       />
       <AccordionHeader textTranslated={textTranslated} />
-      <main>
-        <section>
-          <h1>teste</h1>
-        </section>
-      </main>
+      <Wrapper>
+        <HeroContainer>
+          <HeroWhiteSpace>
+            <Title>
+              Escolha o hardware ideal para atender às necessidades do seu
+              produto
+            </Title>
+            <Subtitle>
+              Plataformas customizáveis de hardware e sistema operacional.
+              Oferecemos agilidade e qualidade para seus produtos.
+            </Subtitle>
+            <FormContainer>
+              <form action="">
+                <InputFiel
+                  type="email"
+                  name="email"
+                  placeholder="Seu e-mail"
+                  paddingRight={120}
+                />
+                <InputButton type="submit">Enviar</InputButton>
+              </form>
+              <a>
+                <small>Quer nos conhecer melhor? Estamos à disposição!</small>
+              </a>
+            </FormContainer>
+            <ButtonHome href="#message">
+              <span>Tem dúvida? Mande-nos uma mensagem</span>
+              <CaretDown size={14} weight="bold" aria-hidden />
+            </ButtonHome>
+          </HeroWhiteSpace>
+          <HeroImage>
+            <ImageWrapper>
+              <div className="image-container">
+                <Image
+                  src={boardImage}
+                  alt={"Maincore Logo"}
+                  className="logo"
+                  priority
+                  fill
+                />
+              </div>
+            </ImageWrapper>
+          </HeroImage>
+        </HeroContainer>
+        <Section style={{ backgroundColor: `${colors.white100}` }}>
+          <SectionTitle>Lorem ipsum dolor sit amet consectetur</SectionTitle>
+          <BodyText>
+            Quam libero nulla sed malesuada viverra. Ut venenatis pellentesque
+            arcu lacus proin luctus. Id vehicula
+          </BodyText>
+          <ClientsImage>
+            <Image
+              src={cienaLogo}
+              alt={"Maincore Logo"}
+              className="logo"
+              priority
+              fill
+            />
+            <Image
+              src={inatelLogo}
+              alt={"Maincore Logo"}
+              className="logo"
+              priority
+              fill
+            />
+            <Image
+              src={learningVillageLogo}
+              alt={"Maincore Logo"}
+              className="logo"
+              priority
+              fill
+            />
+            <Image
+              src={unicampLogo}
+              alt={"Maincore Logo"}
+              className="logo"
+              priority
+              fill
+            />
+            <Image
+              src={accentureLogo}
+              alt={"Maincore Logo"}
+              className="logo"
+              priority
+              fill
+            />
+          </ClientsImage>
+        </Section>
+        <Section
+          style={{
+            backgroundImage: "url('./images/background-solutions.png')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "right",
+          }}
+        >
+          <SectionTitle style={{ color: `${colors.white100}` }}>
+            Soluções tecnológicas disruptivas
+          </SectionTitle>
+          <BodyText style={{ color: `${colors.white100}` }}>
+            A Maincore é uma empresa especializada em soluções tecnológicas
+            baseadas em hardware e software para sistemas embarcados e lógica
+            programável. Oferecemos produtos de alta qualidade e inovadores, com
+            o objetivo de atender às necessidades do mercado e garantir a
+            satisfação de nossos clientes.
+          </BodyText>
+          <CardWrapper>
+            <CardContainer>
+              <CardIcon>
+                <div>
+                  <RocketLaunch
+                    color={colors.secondary700}
+                    size={24}
+                    weight="fill"
+                  />
+                </div>
+              </CardIcon>
+              <CardText>Lançar um produto de sucesso</CardText>
+            </CardContainer>
+            <CardContainer>
+              <CardIcon>
+                <div>
+                  <Cursor color={colors.secondary700} size={24} weight="fill" />
+                </div>
+              </CardIcon>
+              <CardText>Selecione seu hardware</CardText>
+            </CardContainer>
+            <CardContainer>
+              <CardIcon>
+                <div>
+                  <Signpost
+                    color={colors.secondary700}
+                    size={24}
+                    weight="fill"
+                  />
+                </div>
+              </CardIcon>
+              <CardText>Opções de software e sistema operacional</CardText>
+            </CardContainer>
+            <CardContainer>
+              <CardIcon>
+                <div>
+                  <Chats color={colors.secondary700} size={24} weight="fill" />
+                </div>
+              </CardIcon>
+              <CardText>Suporte de especialistas</CardText>
+            </CardContainer>
+          </CardWrapper>
+        </Section>
+        <Section>
+          <SectionTitle>Explore nossos produtos</SectionTitle>
+          <ProductWrapper>
+            <ProductContainer>
+              <ProductTitle>Sistema em Módulo</ProductTitle>
+              <ProductDescription>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Non risus aliquam
+                  adipiscing sed posuere. Nisl massa in viverra pretium interdum
+                  ornare id.
+                </p>
+                <p>
+                  At lacinia fusce vestibulum ipsum. Diam mauris enim at nunc
+                  eget ac. Rhoncus netus suspendisse in ligula eu sed accumsan.
+                  Sit porttitor vestibulum scelerisque tellus. Sit cursus.
+                </p>
+              </ProductDescription>
+            </ProductContainer>
+            <ProductContainer
+              style={{
+                paddingTop: 0,
+                display: "flex",
+                textAlign: "start",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "flex-end",
+              }}
+            >
+              <ProductImage>
+                <Image
+                  src={boardBackground}
+                  alt={"Maincore Logo"}
+                  className="logo"
+                  priority
+                  fill
+                />
+              </ProductImage>
+              <div>
+                <ProductTitle>Maincore Vega</ProductTitle>
+                <ProductDescription style={{ paddingBottom: "24px" }}>
+                  Transforme sua empresa com nossos computadores personalizados:
+                  hardware.
+                </ProductDescription>
+                <ProductButton>Conheça nossos produtos</ProductButton>
+              </div>
+            </ProductContainer>
+            <ProductContainer>
+              <ProductTitle>Maincore Sirius</ProductTitle>
+              <ProductDescription>
+                Hardware e sistemas operacionais avançados para se destacar no
+                mercado.
+              </ProductDescription>
+              <ProductCard>Lorem ipsum dolor </ProductCard>
+              <ProductCard>Lorem ipsum dolor </ProductCard>
+              <NewProductCard>Em Breve</NewProductCard>
+              <ProductButton
+                style={{
+                  backgroundColor: "transparent",
+                  color: `${colors.tertiary800}`,
+                  border: `1px solid ${colors.tertiary800}`,
+                }}
+              >
+                Conheça nossos produtos
+              </ProductButton>
+            </ProductContainer>
+          </ProductWrapper>
+        </Section>
+      </Wrapper>
     </>
   );
 }
