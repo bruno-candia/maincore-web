@@ -24,6 +24,7 @@ export function Header({
               src={"./maincore.svg"}
               alt={"Maincore Logo"}
               className="logo"
+              sizes="100%"
               priority
               fill
             />

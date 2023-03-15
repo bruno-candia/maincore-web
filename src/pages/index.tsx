@@ -110,8 +110,10 @@ export default function Home() {
                   src={boardImage}
                   alt={"Maincore Logo"}
                   className="logo"
+                  sizes="100%"
                   priority
-                  fill
+                  width={100}
+                  height={100}
                 />
               </div>
             </ImageWrapper>
@@ -129,35 +131,45 @@ export default function Home() {
               alt={"Maincore Logo"}
               className="logo"
               priority
-              fill
+              width={100}
+              height={100}
+              sizes="100%"
             />
             <Image
               src={inatelLogo}
               alt={"Maincore Logo"}
               className="logo"
+              sizes="100%"
               priority
-              fill
+              width={100}
+              height={100}
             />
             <Image
               src={learningVillageLogo}
               alt={"Maincore Logo"}
               className="logo"
+              sizes="100%"
               priority
-              fill
+              width={100}
+              height={100}
             />
             <Image
               src={unicampLogo}
               alt={"Maincore Logo"}
               className="logo"
               priority
-              fill
+              sizes="100%"
+              width={100}
+              height={100}
             />
             <Image
               src={accentureLogo}
               alt={"Maincore Logo"}
+              sizes="100%"
               className="logo"
               priority
-              fill
+              width={100}
+              height={100}
             />
           </ClientsImage>
         </Section>
@@ -256,7 +268,9 @@ export default function Home() {
                   alt={"Maincore Logo"}
                   className="logo"
                   priority
-                  fill
+                  sizes="100%"
+                  width={100}
+                  height={100}
                 />
               </ProductImage>
               <div>

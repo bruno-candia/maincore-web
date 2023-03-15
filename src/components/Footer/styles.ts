@@ -49,6 +49,7 @@ export const Hero = styled.div`
   .logo {
     object-fit: contain;
     width: 50% !important;
+    height: 100%;
     position: relative !important;
     height: unset !important;
   }

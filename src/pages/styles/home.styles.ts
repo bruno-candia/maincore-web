@@ -151,6 +151,7 @@ export const ImageWrapper = styled.div`
   .image-container {
     position: unset !important;
     width: 100% !important;
+    height: auto;
     display: flex;
     flex-direction: row; /* row é padrão */
     justify-content: center;
@@ -222,6 +223,7 @@ export const ClientsImage = styled.div`
   .logo {
     object-fit: contain;
     width: 100% !important;
+    height: 100%;
     position: relative !important;
     height: unset !important;
   }
