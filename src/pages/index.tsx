@@ -38,7 +38,7 @@ import {
   ContactTextArea,
   CheckboxContainer,
   ContactButtonForm,
-} from "./styles/home.styles";
+} from "../styles/home.styles";
 import {
   CaretDown,
   Chats,
